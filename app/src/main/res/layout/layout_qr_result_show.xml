@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/ivDialog"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/_3sdp"
+        android:layout_marginEnd="@dimen/_3sdp"
+        android:layout_marginBottom="@dimen/_3sdp"
+        android:background="@drawable/dialog_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/cancel_dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:src="@drawable/ic_cancel_pink_24dp"
+        app:layout_constraintEnd_toEndOf="@+id/ivDialog"
+        app:layout_constraintTop_toTopOf="@+id/ivDialog" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/textTypeIcon"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_80sdp"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/ic_text_documents"
+        android:tint="@color/lochmara"
+        app:layout_constraintBottom_toBottomOf="@+id/ivDialog"
+        app:layout_constraintEnd_toEndOf="@+id/ivDialog"
+        app:layout_constraintStart_toStartOf="@+id/ivDialog"
+        app:layout_constraintTop_toTopOf="@+id/ivDialog"
+        app:layout_constraintVertical_bias="0.19" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/scanned_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_28sdp"
+        android:layout_marginTop="@dimen/_28sdp"
+        android:layout_marginEnd="@dimen/_28sdp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:gravity="center"
+        android:padding="@dimen/_5sdp"
+        android:textColor="@color/woodsmoke"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintEnd_toEndOf="@+id/ivDialog"
+        app:layout_constraintStart_toStartOf="@+id/ivDialog"
+        app:layout_constraintTop_toBottomOf="@+id/textTypeIcon"
+        tools:text="TextView" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/scanned_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_24sdp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:textColor="@color/woodsmoke"
+        android:textSize="14sp"
+
+        app:layout_constraintEnd_toEndOf="@+id/scanned_text"
+        app:layout_constraintStart_toStartOf="@+id/scanned_text"
+        app:layout_constraintTop_toBottomOf="@+id/scanned_text"
+        tools:text="22:10pm - 2019-28-10" />
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/copy_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:src="@drawable/ic_content_copy_white_24dp"
+        app:layout_constraintBottom_toBottomOf="@+id/favourite_icon"
+        app:layout_constraintEnd_toStartOf="@+id/favourite_icon"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/share_result"
+        app:layout_constraintTop_toTopOf="@+id/favourite_icon"
+        app:layout_constraintVertical_bias="0.32" />
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/share_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:src="@drawable/ic_share_white_24dp"
+        android:tint="@color/lochmara"
+        app:layout_constraintBottom_toBottomOf="@+id/copy_result"
+        app:layout_constraintEnd_toStartOf="@+id/copy_result"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="@+id/ivDialog"
+        app:layout_constraintTop_toTopOf="@+id/copy_result" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/favourite_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_28sdp"
+        android:layout_marginBottom="@dimen/_35sdp"
+        android:padding="10dp"
+        android:src="@drawable/selector_favourite"
+        app:layout_constraintBottom_toBottomOf="@+id/ivDialog"
+        app:layout_constraintEnd_toEndOf="@+id/ivDialog"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/copy_result"
+        app:layout_constraintTop_toBottomOf="@+id/scanned_date" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

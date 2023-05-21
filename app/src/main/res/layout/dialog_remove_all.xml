@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/ivDialog"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/dialog_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/cancelDialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:src="@drawable/ic_cancel_pink_24dp"
+        app:layout_constraintEnd_toEndOf="@+id/ivDialog"
+        app:layout_constraintTop_toTopOf="@+id/ivDialog" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/textTypeIcon"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_80sdp"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/ic_delete"
+        android:tint="@color/lochmara"
+        app:layout_constraintBottom_toBottomOf="@+id/ivDialog"
+        app:layout_constraintEnd_toEndOf="@+id/ivDialog"
+        app:layout_constraintStart_toStartOf="@+id/ivDialog"
+        app:layout_constraintTop_toTopOf="@+id/ivDialog"
+        app:layout_constraintVertical_bias="0.19" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_28sdp"
+        android:layout_marginEnd="@dimen/_28sdp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:gravity="center"
+        android:padding="@dimen/_5sdp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_14ssp"
+        app:layout_constraintEnd_toEndOf="@+id/ivDialog"
+        app:layout_constraintStart_toStartOf="@+id/ivDialog"
+        app:layout_constraintTop_toBottomOf="@+id/textTypeIcon"
+        tools:text="@string/clear_all" />
+
+    <TextView
+        android:id="@+id/sub_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:textColor="@color/woodsmoke"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintEnd_toEndOf="@+id/title"
+        app:layout_constraintStart_toStartOf="@+id/title"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        tools:text="@string/clear_all_result" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_clear"
+        android:layout_width="@dimen/_70sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@drawable/button_background"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="@string/clear"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:cornerRadius="@dimen/_15sdp"
+        app:layout_constraintEnd_toEndOf="@id/sub_title"
+        app:layout_constraintStart_toStartOf="@id/sub_title"
+        app:layout_constraintTop_toBottomOf="@id/sub_title" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_10sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_clear" />
+</androidx.constraintlayout.widget.ConstraintLayout>
